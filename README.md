@@ -1,3 +1,3 @@
 #Covid19 Testing Sites
 
-This is a readme for the project
+Utilizes Google Maps API to mark hospitals which offer rapid Covid-19 testing 
