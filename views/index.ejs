@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 800px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>COVID 19 Testing Sites
+
+    </h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of testing sites
+
+  var Northside = {lat: 33.9089913, lng: -84.3540925 };
+  var Emory = {lat: 33.7920494, lng: -84.3218688 };
+  // The map, centered at Sites
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: Northside} );
+  // The marker, positioned at Site
+  var marker = new google.maps.Marker({position: Northside, map: map} );
+  var marker2 = new google.maps.Marker({position: Emory, map: map} );
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhjYhHdHVz1GOUr1UgN8cR-37JgDddtg&callback=initMap">
+    </script>
+  </body>
+</html>
